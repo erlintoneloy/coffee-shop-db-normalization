@@ -19,7 +19,7 @@ Proveedores: Listado de productos en Excel.
 Mi tarea es diseñar el esquema, normalizar las tablas, definir las relaciones y crear objetos de base de datos para facilitar la generación de reportes operativos.
 
 🚀 Objetivos del Laboratorio
-[ ] Identificar Entidades y Atributos: Extraer el modelo lógico de los archivos fuente.
+[*] Identificar Entidades y Atributos: Extraer el modelo lógico de los archivos fuente.
 
 [ ] Diseño de ERD: Crear el Diagrama de Entidad-Relación en pgAdmin.
 

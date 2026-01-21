@@ -1,0 +1,13 @@
+Identificación de Atributos: Sales Transaction  - Proyecto Coffee Shop
+
+Al observar la tabla sales_transaction, los atributos (campos) son:
+
+transaction_id: El identificador único de la venta (Primary Key).
+transaction_date: La fecha en que se realizó la venta.
+transaction_time: La hora exacta de la transacción.
+sales_outlet_id: El ID del lugar donde se vendió (Foreign Key).
+staff_id: El ID del empleado que realizó la venta (Foreign Key).
+customer_id: El ID del cliente que compró (Foreign Key).
+product_id: El ID del producto vendido (Foreign Key).
+quantity: La cantidad de unidades compradas.
+price: El precio unitario al que se vendió el producto.
