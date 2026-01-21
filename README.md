@@ -22,9 +22,9 @@ Mi tarea es diseñar el esquema, normalizar las tablas, definir las relaciones y
 
 [*] Identificar Entidades y Atributos: Extraer el modelo lógico de los archivos fuente.
 
-[ ] Diseño de ERD: Crear el Diagrama de Entidad-Relación en pgAdmin.
+[*] Diseño de ERD: Crear el Diagrama de Entidad-Relación en pgAdmin.
 
-[ ] Normalización: Asegurar la integridad de los datos y eliminar redundancias.
+[*] Normalización: Asegurar la integridad de los datos y eliminar redundancias.
 
 [ ] Implementación SQL: Generar y ejecutar scripts de creación de objetos.
 
