@@ -1,0 +1,13 @@
+Lista de Entidades Identificadas - Proyecto Coffee Shop
+
+Basado en las tablas que analizamos en la imagen inicial, estas son las entidades a listar:
+
+1.- Staff (Personal/Empleados)
+
+2.- Sales Outlet (Puntos de Venta/Tiendas)
+
+3.- Product (Productos)
+
+4.- Customer (Clientes)
+
+5.- Sales Transaction (Transacciones de Venta)
