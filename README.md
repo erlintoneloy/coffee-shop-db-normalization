@@ -1,59 +1,60 @@
-# coffee-shop-db-normalization
-Migración y normalización de datos de una cafetería desde múltiples fuentes (CSV/Excel) a PostgreSQL
+Coffee Shop Data Engineering: Normalization & Multi-DB Migration
+Centralización, normalización y ETL de datos transaccionales para una arquitectura de bases de datos híbrida.
 
+📝 Visión General del Proyecto
+Este proyecto aborda la problemática real de la fragmentación de datos en una cadena de cafeterías en expansión. La información operativa residía en silos de datos heterogéneos (HQ, CRM, POS y Proveedores) en formatos como Excel y CSV.
 
-Sistema de Gestión de Datos: Coffee Shop Project ☕
-Este proyecto forma parte de un caso práctico de ingeniería de datos y diseño de bases de datos relacionales. El objetivo principal es centralizar información proveniente de múltiples fuentes (Excel y CSV) en un sistema unificado y normalizado utilizando PostgreSQL y MySQL.
+El objetivo fue diseñar e implementar un ecosistema de datos centralizado en PostgreSQL, optimizado para el rendimiento mediante vistas materializadas y preparado para una migración fluida hacia entornos MySQL y IBM DB2.
 
-📝 Escenario del Proyecto
-La empresa de café tiene datos distribuidos en diferentes departamentos:
+🚀 Objetivos Estratégicos
+Ingeniería Inversa y Modelado: Extracción de lógica de negocio desde archivos planos para la creación de un Modelo Lógico/Físico.
 
-Sede (HQ): Información de personal y puntos de venta en hojas de cálculo.
+Normalización Avanzada: Refactorización de esquemas para eliminar redundancias y garantizar la integridad referencial.
 
-Puntos de Venta (POS): Datos de transacciones en archivos CSV.
+Pipeline de Datos (ETL): Implementación de procesos de extracción y transformación para la unificación de datos.
 
-CRM: Datos de clientes en archivos CSV.
+Arquitectura de Portabilidad: Generación de activos agnósticos al motor de base de datos para garantizar la interoperabilidad multicloud.
 
-Proveedores: Listado de productos en Excel.
+🛠️ Stack Tecnológico
+Base de Datos Principal: PostgreSQL 15+
 
-Mi tarea es diseñar el esquema, normalizar las tablas, definir las relaciones y crear objetos de base de datos para facilitar la generación de reportes operativos.
+Entornos de Destino: MySQL (phpMyAdmin) & IBM DB2.
 
-🚀 Objetivos del Laboratorio
+Herramientas de Diseño: pgAdmin 4 ERD Tool.
 
-[*] Identificar Entidades y Atributos: Extraer el modelo lógico de los archivos fuente.
+Infraestructura: Entornos basados en Linux (Shell/Bash).
 
-[*] Diseño de ERD: Crear el Diagrama de Entidad-Relación en pgAdmin.
+Control de Versiones: Git con flujo de trabajo basado en Rebase para un historial limpio.
 
-[*] Normalización: Asegurar la integridad de los datos y eliminar redundancias.
+🏗️ Ciclo de Vida del Desarrollo
+1. Diseño y Normalización (ERD)
+Se identificaron y corrigieron errores críticos de integridad referencial en el diseño original. Se implementó un esquema de 7 tablas relacionadas que cubren desde el personal (staff) hasta el detalle granular de las ventas (sales_detail).
 
-[*] Implementación SQL: Generar y ejecutar scripts de creación de objetos.
+2. Implementación y Troubleshooting
+Durante el despliegue, se superaron restricciones de interfaz gráfica mediante scripts avanzados de consola SQL.
 
-[*] Optimización: Crear Vistas y Vistas Materializadas para reportes rápidos.
+Dominio de SQL COPY: Uso del comando COPY para la exportación directa desde el servidor, evadiendo bloqueos de portapapeles y permisos de navegador.
 
-🛠️ Herramientas Utilizadas
-Diseño: pgAdmin ERD Tool.
+Administración de Sistemas: Gestión de directorios de sistema (/tmp y caché de credenciales) para la manipulación de archivos CSV de gran tamaño.
 
-Base de Datos Principal: PostgreSQL.
+3. Optimización de Consultas
+Creación de Vistas Materializadas para acelerar el acceso a datos críticos de marketing y reportes de nómina, permitiendo una reducción significativa en el tiempo de ejecución de consultas complejas.
 
-Gestión y Migración: MySQL & phpMyAdmin.
+📂 Estructura del Ecosistema
+/scripts: Diccionario de datos SQL (DDL/DML) y reportes CSV generados.
 
-Control de Versiones: Git & GitHub.
+/docs: Evidencias de ejecución (Tasks 5A - 10) y documentación de validación.
 
-📂 Estructura del Repositorio
-/data: Archivos fuente originales (CSV/Excel).
+GeneratedScript_personal.sql: Lógica de negocio optimizada y corregida.
 
-/design: Diagramas de Entidad-Relación (ERD) y documentación del modelo.
+💡 Nota de Ingeniería y Portabilidad
+Estado del Proyecto: El pipeline se completó exitosamente hasta la fase de Exportación y Validación de Datos.
 
-/scripts: Código SQL para creación de tablas, relaciones y vistas.
+Ante restricciones de infraestructura externa para la carga final en DB2, se entregaron archivos CSV estandarizados y saneados. Estos activos han sido validados para garantizar una carga de datos zero-error en cualquier motor relacional compatible, cumpliendo con los estándares de interoperabilidad requeridos por la empresa.
 
-/docs: Capturas de pantalla de resultados y reportes.
+Cómo explorar este proyecto
+Revisar el Modelo: Dirígete a /docs para visualizar el esquema lógico corregido.
 
-🏗️ Modelo de Datos (ERD)
-(Próximamente: Aquí se incluirá la imagen del diagrama generado en pgAdmin)
+Ejecutar el Esquema: Utiliza GeneratedScript_personal.sql en una instancia de PostgreSQL.
 
-Cómo usar este repositorio
-Clona el repositorio: git clone https://github.com/tu-usuario/coffee-shop-db-normalization.git
-
-Los scripts de creación se encuentran en la carpeta /scripts.
-
-Sigue el orden de ejecución indicado en los archivos SQL para mantener la integridad referencial.
+Consultar Datos: El archivo CoffeeData.sql contiene los registros reales listos para análisis.
