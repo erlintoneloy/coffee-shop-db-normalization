@@ -26,9 +26,9 @@ Mi tarea es diseñar el esquema, normalizar las tablas, definir las relaciones y
 
 [*] Normalización: Asegurar la integridad de los datos y eliminar redundancias.
 
-[ ] Implementación SQL: Generar y ejecutar scripts de creación de objetos.
+[*] Implementación SQL: Generar y ejecutar scripts de creación de objetos.
 
-[ ] Optimización: Crear Vistas y Vistas Materializadas para reportes rápidos.
+[*] Optimización: Crear Vistas y Vistas Materializadas para reportes rápidos.
 
 🛠️ Herramientas Utilizadas
 Diseño: pgAdmin ERD Tool.
